@@ -1,9 +1,130 @@
 
-*configuration.ConfigXML#isDatabaseLocal()ZQ
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaA A("1*³
-1Q
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaB	 B("[
+:testOperations.TestDataAccess#isRideActive(Ldomain/Ride;)Za
+UC:/Users/HaiYong/git/Rides24Complete/src/test/java/testOperations/TestDataAccess.javað ð( "7*ý
+2
+õ õ(!S
 Q
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaB B(
-""B
-configuration.ConfigXML
+
+õ õ(!
+bookingdomain.Booking"__id*"
+
+__unknown_file (
+""Ž
+‹
+
+õ õ(!
+bookingdomain.Booking"
+__arrayGet*2
+
+__unknown_file (
+
+%3java.util.List*"
+
+__unknown_file (
+""*
+5
+1*%
+3
+÷ ÷( "
+
+÷ ÷(!
+""*‚
+4
+ö? ö(F›˜
+
+ö? ö(R
+%6java.lang.String",domain.Booking#getStatus()Ljava/lang/String;*7
+
+__unknown_file (
+
+bookingdomain.Booking2getStatus()ÊÇ
+
+ö? ö(g
+%7boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%6java.lang.String**
+
+__unknown_file (
+
+NotDefined2equals(Ljava/lang/Object;)*
+2
+3*€
+5
+ö ö(›˜
+
+ö ö((
+%4java.lang.String",domain.Booking#getStatus()Ljava/lang/String;*7
+
+__unknown_file (
+
+bookingdomain.Booking2getStatus()ÈÅ
+
+ö ö(;
+%5boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%4java.lang.String*(
+
+__unknown_file (
+
+Accepted2equals(Ljava/lang/Object;)*
+3
+4*©
+6
+õ$ õ((’
+
+õ$ õ(6
+%3java.util.List")domain.Ride#getBookings()Ljava/util/List;*1
+
+__unknown_file (
+
+ridedomain.Ride2getBookings()*
+2*ú
+7
+ñ	 ñ(S
+Q
+
+ñ	 ñ(
+%0java.io.PrintStream"__id*"
+
+__unknown_file (
+""äá
+
+ñ	 ñ(>
+
+%1void"0java.io.PrintStream#println(Ljava/lang/String;)V*7
+
+__unknown_file (
+
+%0java.io.PrintStream*?
+
+__unknown_file (#!
+>> TestDataAccess: isRideActive2println(Ljava/lang/String;)¤
+¡
+
+ó ó(
+%2boolean"	__compare*"
+
+__unknown_file (
+!=*1
+
+__unknown_file (
+
+ridedomain.Ride*"
+
+__unknown_file (
+""*
+6
+1*%
+1
+û û("
+
+û	 û(
+"":!
+
+ð! ð(*
+ridedomain.RideB!
+testOperations.TestDataAccessHX

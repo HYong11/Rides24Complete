@@ -70,6 +70,7 @@ public class DataAccess {
 	public void initializeDB() {
 		db.getTransaction().begin();
 		try {
+			
 			Driver driver1 = new Driver("Urtzi", "123");
 			driver1.setMoney(15);
 			driver1.setBalorazioa(14);
@@ -187,6 +188,8 @@ public class DataAccess {
 	 * 
 	 * @return collection of cities
 	 */
+			
+			
 	public List<String> getDepartCities() {
 		TypedQuery<String> query = db.createQuery("SELECT DISTINCT r.from FROM Ride r ORDER BY r.from", String.class);
 		List<String> cities = query.getResultList();
