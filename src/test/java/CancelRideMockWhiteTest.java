@@ -24,11 +24,13 @@ import domain.Booking;
 import domain.Driver;
 import domain.Ride;
 import domain.Traveler;
+import exceptions.RideAlreadyExistException;
+import exceptions.RideMustBeLaterThanTodayException;
 import testOperations.TestDataAccess;
 
-public class CancelRideMockBlackTest {
+public class CancelRideMockWhiteTest {
 
-static DataAccess sut;
+	static DataAccess sut;
 	
 	protected MockedStatic<Persistence> persistenceMock;
 
@@ -40,7 +42,7 @@ static DataAccess sut;
     protected  EntityTransaction  et;
 	
 	static TestDataAccess testDA = new TestDataAccess();
-	
+
 	@Before
     public  void init() {
         MockitoAnnotations.openMocks(this);
@@ -90,81 +92,83 @@ static DataAccess sut;
 			}
 		
 	}
+
+	
 	
 	@Test
 	public void test2() {
-		// define parameters
-		String from = "Donostia";
-		String to = "Bilbo";
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		Date date = null;
 		try {
-			 date = sdf.parse("05/10/2026");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}	
-		
-		Driver d = new Driver("TestDriver2", "123");
-		ride = new Ride(from, to, date, 5,5,d);
-		ride.setBookings(new ArrayList<Booking>());
-		
-		try {	
+			
+			//define parameters
+
+			ride = null;
+			
+			Mockito.when(db.find(Ride.class, null)).thenReturn(null);
+
+			
+			//invoke System Under Test (sut)  
 			sut.open();
 			sut.cancelRide(ride);
-			fail("No debe dejar cancelar un viaje que no esta en BD");			
-		} catch (Exception e) {
-			assertTrue(true);
-		} finally {
-			//testDA.open();
-			//testDA.removeRide("TestDriver2", from, to, date);
-			//testDA.removeDriver("TestDriver2");
-			//testDA.close();
-			sut.close();
-		}
+			
+			//verify the results
+			fail("Deberia haber lanzado una excepción");
+			
+		   } catch (NullPointerException e) {
+			   fail("NullPointerException no se ha tratado");
+
+			} catch (Exception e) {
+				e.toString();
+				assertTrue(db.getTransaction().isActive());
+
+			} finally {
+				sut.close();
+			}
+		
 	}
 	
-	
+		
 	@Test
 	public void test3() {
 		
-		
-		//define parameters
+			
+			//define parameters
 
-		String from = "Donostia";
-		String to = "Bilbo";
+			String from = "Donostia";
+			String to = "Bilbo";
+			
+			Driver d = new Driver("TestDriver", "123");
+			Mockito.when(db.find(Driver.class, d.getUsername())).thenReturn(d);
+			
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			Date date = null;
+			try {
+				 date = sdf.parse("05/10/2026");
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}	
+			
+			ride = new Ride(from, to, date, 5, 5, d);
+			ride.setBookings(new ArrayList<Booking>());
+			Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
+			Mockito.when(db.find(Driver.class, d.getUsername())).thenReturn(d);
+			
+			try {
+			//invoke System Under Test (sut)  
+			sut.open();
+			sut.cancelRide(ride);
+			
+			//verify the results
+			assertFalse("El viaje deberia desactivarse", ride.isActive());
+			
+			} catch (Exception e) {
+				fail("Deberia dejar cancelar el viaje aunque no tenga reservas");
+				e.toString();
+			} finally {
+				sut.close();
+			}
 		
-		Driver d = new Driver("TestDriver", "123");
-		Mockito.when(db.find(Driver.class, d.getUsername())).thenReturn(d);
-		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		Date date = null;
-		try {
-			 date = sdf.parse("05/10/2026");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}	
-		
-		ride = new Ride(from, to, date, 5, 5, d);
-		ride.setBookings(new ArrayList<Booking>());
-		Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
-		Mockito.when(db.find(Driver.class, d.getUsername())).thenReturn(d);
-		
-		try {
-		//invoke System Under Test (sut)  
-		sut.open();
-		sut.cancelRide(ride);
-		
-		//verify the results
-		assertFalse("El viaje deberia desactivarse", ride.isActive());
-		
-		} catch (Exception e) {
-			fail("Deberia dejar cancelar el viaje aunque no tenga reservas");
-			e.toString();
-		} finally {
-			sut.close();
-		}
+	}
 	
-}
 	
 	
 	@Test
@@ -227,65 +231,9 @@ static DataAccess sut;
 	}
 	
 	
+	
 	@Test
 	public void test5() {
-		try {
-			
-			//define parameters
-
-			String from = "Donostia";
-			String to = "Bilbo";
-			Driver d = new Driver("TestDriver", null);
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-			Date date = null;
-			try {
-				 date = sdf.parse("05/10/2026");
-			} catch (ParseException e) {
-				e.printStackTrace();
-			}	
-			ride = new Ride(from, to, date, 5, 5, d);
-			
-			Traveler t1 = new Traveler("t1", "p1");
-			Traveler t2 = new Traveler("t2", "p2");
-			Traveler t3 = new Traveler("t3", "p3");
-			
-			Booking b1 = new Booking(ride, t1, 1);
-			b1.setStatus("Rejected");
-			Booking b2 = new Booking(ride, t2, 1);
-			b2.setStatus("Accepted");
-			Booking b3 = new Booking(ride, t3, 1);
-			b3.setStatus("Rejected");
-			
-			List<Booking> lb = new ArrayList<Booking>();
-			lb.add(b1); lb.add(b2); lb.add(b3);
-			ride.setBookings(lb);
-			
-			Mockito.when(db.find(Ride.class, ride.getRideNumber())).thenReturn(ride);
-			Mockito.when(db.find(Driver.class, d.getUsername())).thenReturn(d);
-			
-			//invoke System Under Test (sut)  
-			sut.open();
-			sut.cancelRide(ride);
-			
-			//verify the results
-			assertFalse(ride.isActive());
-			
-			for (Booking booking : ride.getBookings()) {
-	            assertEquals("Rejected", booking.getStatus());
-	        }
-			
-			} catch (Exception e) {
-				e.toString();
-				fail("Excepción inesperada");
-			} finally {
-				sut.close();
-			}
-		
-	}  
-	
-	
-	@Test
-	public void test6() {
 		try {
 			
 			//define parameters
@@ -339,7 +287,6 @@ static DataAccess sut;
 			}
 		
 	}  
-	*/
-	
 
+*/
 }
