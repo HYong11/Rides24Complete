@@ -34,7 +34,7 @@ public class CancelRideBDWhiteTest {
 		// define parameters
 		ride = null;
 
-		try {  
+		try {    
 			sut.open();
 			sut.cancelRide(ride);
 			fail("Deberia lanzar una excepción");
