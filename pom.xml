@@ -19,7 +19,7 @@
 						</goals>
 					</execution>
 					<execution>
-						<id>report</	id>
+						<id>report</id>
 						<goals>
 							<goal>report</goal>
 						</goals>
