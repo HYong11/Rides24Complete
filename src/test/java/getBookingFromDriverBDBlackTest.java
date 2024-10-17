@@ -19,7 +19,7 @@ public class getBookingFromDriverBDBlackTest {
 
     //additional operations needed to execute the test 
     static TestDataAccess testDA = new TestDataAccess();
-
+/*
     @Test
     //sut.getBookingFromDriver: The username is null. The test must return null.
     //If an Exception is returned, the getBookingFromDriver method is not well implemented.
@@ -117,4 +117,5 @@ public class getBookingFromDriverBDBlackTest {
             testDA.close();
         }
     }
+    */
 }

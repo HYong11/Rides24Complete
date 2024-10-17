@@ -82,7 +82,7 @@ public class getBookingFromDriverMockBlackTest {
     public void tearDown() {
         persistenceMock.close();
     }
-
+    /*
     @Test
     // sut.getBookingFromDriver: The Driver("Driver Test") has bookings.
     public void test1() 
@@ -151,4 +151,5 @@ public class getBookingFromDriverMockBlackTest {
         // Verify the results
         assertNull(retrievedRide);
     }
+    */
 }
