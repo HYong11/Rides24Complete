@@ -1,0 +1,4 @@
+testOperations.TestDataAccess#removeTraveler(Ldomain/Traveler;)V
+1d58704fcaa4a083c79e6e4e4aa2504a
+==
+getUsername domain.User#getUsername()Ljava/lang/String;

@@ -3548,24 +3548,85 @@ toString()Ajavax.swing.event.ListSelectionEvent#toString()Ljava/lang/String;I
 +setBussinessLogic(LbusinessLogic/BLFacade;)<gui.TravelerGUI#setBussinessLogic(LbusinessLogic/BLFacade;)V’
 javax.swing.ListSelectionModeljava.lang.ObjectM
 getSelectedIndices()5javax.swing.ListSelectionModel#getSelectedIndices()[IR
-getSelectedItemsCount()7javax.swing.ListSelectionModel#getSelectedItemsCount()I®
+getSelectedItemsCount()7javax.swing.ListSelectionModel#getSelectedItemsCount()IV
+CancelRideBDWhiteTestjava.lang.Object+
+<init>()CancelRideBDWhiteTest#<init>()Vÿ
+CancelRideBDBlackTestjava.lang.Object+
+<init>()CancelRideBDBlackTest#<init>()V)
+test1()CancelRideBDBlackTest#test1()V)
+test2()CancelRideBDBlackTest#test2()V)
+test3()CancelRideBDBlackTest#test3()V)
+test4()CancelRideBDBlackTest#test4()V)
+test5()CancelRideBDBlackTest#test5()V)
+test6()CancelRideBDBlackTest#test6()V»)
+java.text.SimpleDateFormatjava.text.DateFormat0
+<init>()$java.text.SimpleDateFormat#<init>()VT
+<init>(Ljava/lang/String;)6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)Vé
+7<init>(Ljava/lang/String;Ljava/text/DateFormatSymbols;)Sjava.text.SimpleDateFormat#<init>(Ljava/lang/String;Ljava/text/DateFormatSymbols;)Vx
+,<init>(Ljava/lang/String;Ljava/util/Locale;)Hjava.text.SimpleDateFormat#<init>(Ljava/lang/String;Ljava/util/Locale;)Vr
+)applyLocalizedPattern(Ljava/lang/String;)Ejava.text.SimpleDateFormat#applyLocalizedPattern(Ljava/lang/String;)V`
+ applyPattern(Ljava/lang/String;)<java.text.SimpleDateFormat#applyPattern(Ljava/lang/String;)Vh
+$applyPatternImpl(Ljava/lang/String;)@java.text.SimpleDateFormat#applyPatternImpl(Ljava/lang/String;)V^
+checkNegativeNumberExpression();java.text.SimpleDateFormat#checkNegativeNumberExpression()V?
+clone()4java.text.SimpleDateFormat#clone()Ljava/lang/Object;W
+compile(Ljava/lang/String;)8java.text.SimpleDateFormat#compile(Ljava/lang/String;)[Cf
+#encode(IILjava/lang/StringBuilder;)?java.text.SimpleDateFormat#encode(IILjava/lang/StringBuilder;)VT
+equals(Ljava/lang/Object;)6java.text.SimpleDateFormat#equals(Ljava/lang/Object;)Z…
+Iformat(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)|java.text.SimpleDateFormat#format(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;ÿ
+Pformat(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/Format$FieldDelegate;)Éjava.text.SimpleDateFormat#format(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/Format$FieldDelegate;)Ljava/lang/StringBuffer;†
+-formatToCharacterIterator(Ljava/lang/Object;)ojava.text.SimpleDateFormat#formatToCharacterIterator(Ljava/lang/Object;)Ljava/text/AttributedCharacterIterator;W
+get2DigitYearStart()?java.text.SimpleDateFormat#get2DigitYearStart()Ljava/util/Date;h
+getDateFormatSymbols()Njava.text.SimpleDateFormat#getDateFormatSymbols()Ljava/text/DateFormatSymbols;ä
+.getDisplayContextNamesMap(ILjava/util/Locale;)Xjava.text.SimpleDateFormat#getDisplayContextNamesMap(ILjava/util/Locale;)Ljava/util/Map;|
+'getDisplayNamesMap(ILjava/util/Locale;)Qjava.text.SimpleDateFormat#getDisplayNamesMap(ILjava/util/Locale;)Ljava/util/Map;4
+
+hashCode()&java.text.SimpleDateFormat#hashCode()I\
+initialize(Ljava/util/Locale;):java.text.SimpleDateFormat#initialize(Ljava/util/Locale;)Vl
+&initializeCalendar(Ljava/util/Locale;)Bjava.text.SimpleDateFormat#initializeCalendar(Ljava/util/Locale;)VT
+initializeDefaultCentury()6java.text.SimpleDateFormat#initializeDefaultCentury()V4
+
+isDigit(C)&java.text.SimpleDateFormat#isDigit(C)Zí
+9matchDSTString(Ljava/lang/String;III[[Ljava/lang/String;)Ujava.text.SimpleDateFormat#matchDSTString(Ljava/lang/String;III[[Ljava/lang/String;)Z∂
+KmatchString(Ljava/lang/String;IILjava/util/Map;Ljava/text/CalendarBuilder;)gjava.text.SimpleDateFormat#matchString(Ljava/lang/String;IILjava/util/Map;Ljava/text/CalendarBuilder;)Iæ
+OmatchString(Ljava/lang/String;II[Ljava/lang/String;Ljava/text/CalendarBuilder;)kjava.text.SimpleDateFormat#matchString(Ljava/lang/String;II[Ljava/lang/String;Ljava/text/CalendarBuilder;)Ié
+7matchZoneString(Ljava/lang/String;I[Ljava/lang/String;)Sjava.text.SimpleDateFormat#matchZoneString(Ljava/lang/String;I[Ljava/lang/String;)Iì
+2parse(Ljava/lang/String;Ljava/text/ParsePosition;)]java.text.SimpleDateFormat#parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;x
+,parseAmbiguousDatesAsAfter(Ljava/util/Date;)Hjava.text.SimpleDateFormat#parseAmbiguousDatesAsAfter(Ljava/util/Date;)Vn
+'readObject(Ljava/io/ObjectInputStream;)Cjava.text.SimpleDateFormat#readObject(Ljava/io/ObjectInputStream;)Vh
+$set2DigitYearStart(Ljava/util/Date;)@java.text.SimpleDateFormat#set2DigitYearStart(Ljava/util/Date;)VÜ
+3setDateFormatSymbols(Ljava/text/DateFormatSymbols;)Ojava.text.SimpleDateFormat#setDateFormatSymbols(Ljava/text/DateFormatSymbols;)VF
+shouldObeyCount(II)/java.text.SimpleDateFormat#shouldObeyCount(II)Z¨
+FsubFormat(IILjava/text/Format$FieldDelegate;Ljava/lang/StringBuffer;Z)bjava.text.SimpleDateFormat#subFormat(IILjava/text/Format$FieldDelegate;Ljava/lang/StringBuffer;Z)VŒ
+WsubParse(Ljava/lang/String;IIIZ[ZLjava/text/ParsePosition;ZLjava/text/CalendarBuilder;)sjava.text.SimpleDateFormat#subParse(Ljava/lang/String;IIIZ[ZLjava/text/ParsePosition;ZLjava/text/CalendarBuilder;)I¨
+FsubParseNumericZone(Ljava/lang/String;IIIZLjava/text/CalendarBuilder;)bjava.text.SimpleDateFormat#subParseNumericZone(Ljava/lang/String;IIIZLjava/text/CalendarBuilder;)I§
+BsubParseZoneString(Ljava/lang/String;ILjava/text/CalendarBuilder;)^java.text.SimpleDateFormat#subParseZoneString(Ljava/lang/String;ILjava/text/CalendarBuilder;)IY
+toLocalizedPattern()Ajava.text.SimpleDateFormat#toLocalizedPattern()Ljava/lang/String;G
+toPattern()8java.text.SimpleDateFormat#toPattern()Ljava/lang/String;¡
+HtranslatePattern(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ujava.text.SimpleDateFormat#translatePattern(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;L
+useDateFormatSymbols()2java.text.SimpleDateFormat#useDateFormatSymbols()Z|
+.zeroPaddingNumber(IIILjava/lang/StringBuffer;)Jjava.text.SimpleDateFormat#zeroPaddingNumber(IIILjava/lang/StringBuffer;)V≈
+java.text.ParseExceptionjava.lang.ExceptionT
+<init>(Ljava/lang/String;I)5java.text.ParseException#<init>(Ljava/lang/String;I)V>
+getErrorOffset()*java.text.ParseException#getErrorOffset()Iâ
 testOperations.TestDataAccessjava.lang.Object3
-<init>()'testOperations.TestDataAccess#<init>()Vè
-/addDriver(Ljava/lang/String;Ljava/lang/String;)\testOperations.TestDataAccess#addDriver(Ljava/lang/String;Ljava/lang/String;)Ldomain/Driver;Ë
-[addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IF)àtestOperations.TestDataAccess#addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IF)Ldomain/Driver;}
--addMovement(Ldomain/User;Ljava/lang/String;D)LtestOperations.TestDataAccess#addMovement(Ldomain/User;Ljava/lang/String;D)VU
-cancelRide(Ldomain/Ride;)8testOperations.TestDataAccess#cancelRide(Ldomain/Ride;)V1
+<init>()'testOperations.TestDataAccess#<init>()VË
+[addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IF)àtestOperations.TestDataAccess#addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IF)Ldomain/Driver;_
+addTraveler(Ldomain/Traveler;)=testOperations.TestDataAccess#addTraveler(Ldomain/Traveler;)VO
+addUser(Ldomain/User;)5testOperations.TestDataAccess#addUser(Ldomain/User;)VØ
+@addUser1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ktestOperations.TestDataAccess#addUser1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldomain/User;]
+addUser2(Ldomain/User;)BtestOperations.TestDataAccess#addUser2(Ldomain/User;)Ldomain/User;¡
+IaddUserWithMoney(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;D)ttestOperations.TestDataAccess#addUserWithMoney(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;D)Ldomain/User;1
 close()&testOperations.TestDataAccess#close()Vï
-2createDriver(Ljava/lang/String;Ljava/lang/String;)_testOperations.TestDataAccess#createDriver(Ljava/lang/String;Ljava/lang/String;)Ldomain/Driver;◊
-TcreateRide(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IFLjava/lang/String;)testOperations.TestDataAccess#createRide(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IFLjava/lang/String;)Ldomain/Ride;a
+2createDriver(Ljava/lang/String;Ljava/lang/String;)_testOperations.TestDataAccess#createDriver(Ljava/lang/String;Ljava/lang/String;)Ldomain/Driver;a
 existDriver(Ljava/lang/String;)>testOperations.TestDataAccess#existDriver(Ljava/lang/String;)Z≈
-QexistRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)ptestOperations.TestDataAccess#existRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Zq
-getTraveler(Ljava/lang/String;)NtestOperations.TestDataAccess#getTraveler(Ljava/lang/String;)Ldomain/Traveler;Y
-isRideActive(Ldomain/Ride;):testOperations.TestDataAccess#isRideActive(Ldomain/Ride;)Z/
+QexistRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)ptestOperations.TestDataAccess#existRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Z≠
+?getUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)jtestOperations.TestDataAccess#getUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldomain/User;/
 open()%testOperations.TestDataAccess#open()Vc
- persistBooking(Ldomain/Booking;)?testOperations.TestDataAccess#persistBooking(Ldomain/Booking;)Vc
  removeDriver(Ljava/lang/String;)?testOperations.TestDataAccess#removeDriver(Ljava/lang/String;)Z”
-RremoveRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)}testOperations.TestDataAccess#removeRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Ldomain/Ride;¡
+RremoveRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)}testOperations.TestDataAccess#removeRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Ldomain/Ride;e
+!removeTraveler(Ldomain/Traveler;)@testOperations.TestDataAccess#removeTraveler(Ldomain/Traveler;)VU
+removeUser(Ldomain/User;)8testOperations.TestDataAccess#removeUser(Ldomain/User;)V_
+removeUser(Ljava/lang/String;)=testOperations.TestDataAccess#removeUser(Ljava/lang/String;)Z¡
 gui.EzabatuGUIjavax.swing.JFrame$
 <init>()gui.EzabatuGUI#<init>()Và
 :jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)Jgui.EzabatuGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)Vj
@@ -3618,56 +3679,7 @@ tearDown()#CreateRideMockWhiteTest#tearDown()V+
 test2() CreateRideMockWhiteTest#test2()V+
 test3() CreateRideMockWhiteTest#test3()V+
 test4() CreateRideMockWhiteTest#test4()V+
-test5() CreateRideMockWhiteTest#test5()V»)
-java.text.SimpleDateFormatjava.text.DateFormat0
-<init>()$java.text.SimpleDateFormat#<init>()VT
-<init>(Ljava/lang/String;)6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)Vé
-7<init>(Ljava/lang/String;Ljava/text/DateFormatSymbols;)Sjava.text.SimpleDateFormat#<init>(Ljava/lang/String;Ljava/text/DateFormatSymbols;)Vx
-,<init>(Ljava/lang/String;Ljava/util/Locale;)Hjava.text.SimpleDateFormat#<init>(Ljava/lang/String;Ljava/util/Locale;)Vr
-)applyLocalizedPattern(Ljava/lang/String;)Ejava.text.SimpleDateFormat#applyLocalizedPattern(Ljava/lang/String;)V`
- applyPattern(Ljava/lang/String;)<java.text.SimpleDateFormat#applyPattern(Ljava/lang/String;)Vh
-$applyPatternImpl(Ljava/lang/String;)@java.text.SimpleDateFormat#applyPatternImpl(Ljava/lang/String;)V^
-checkNegativeNumberExpression();java.text.SimpleDateFormat#checkNegativeNumberExpression()V?
-clone()4java.text.SimpleDateFormat#clone()Ljava/lang/Object;W
-compile(Ljava/lang/String;)8java.text.SimpleDateFormat#compile(Ljava/lang/String;)[Cf
-#encode(IILjava/lang/StringBuilder;)?java.text.SimpleDateFormat#encode(IILjava/lang/StringBuilder;)VT
-equals(Ljava/lang/Object;)6java.text.SimpleDateFormat#equals(Ljava/lang/Object;)Z…
-Iformat(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)|java.text.SimpleDateFormat#format(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;ÿ
-Pformat(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/Format$FieldDelegate;)Éjava.text.SimpleDateFormat#format(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/Format$FieldDelegate;)Ljava/lang/StringBuffer;†
--formatToCharacterIterator(Ljava/lang/Object;)ojava.text.SimpleDateFormat#formatToCharacterIterator(Ljava/lang/Object;)Ljava/text/AttributedCharacterIterator;W
-get2DigitYearStart()?java.text.SimpleDateFormat#get2DigitYearStart()Ljava/util/Date;h
-getDateFormatSymbols()Njava.text.SimpleDateFormat#getDateFormatSymbols()Ljava/text/DateFormatSymbols;ä
-.getDisplayContextNamesMap(ILjava/util/Locale;)Xjava.text.SimpleDateFormat#getDisplayContextNamesMap(ILjava/util/Locale;)Ljava/util/Map;|
-'getDisplayNamesMap(ILjava/util/Locale;)Qjava.text.SimpleDateFormat#getDisplayNamesMap(ILjava/util/Locale;)Ljava/util/Map;4
-
-hashCode()&java.text.SimpleDateFormat#hashCode()I\
-initialize(Ljava/util/Locale;):java.text.SimpleDateFormat#initialize(Ljava/util/Locale;)Vl
-&initializeCalendar(Ljava/util/Locale;)Bjava.text.SimpleDateFormat#initializeCalendar(Ljava/util/Locale;)VT
-initializeDefaultCentury()6java.text.SimpleDateFormat#initializeDefaultCentury()V4
-
-isDigit(C)&java.text.SimpleDateFormat#isDigit(C)Zí
-9matchDSTString(Ljava/lang/String;III[[Ljava/lang/String;)Ujava.text.SimpleDateFormat#matchDSTString(Ljava/lang/String;III[[Ljava/lang/String;)Z∂
-KmatchString(Ljava/lang/String;IILjava/util/Map;Ljava/text/CalendarBuilder;)gjava.text.SimpleDateFormat#matchString(Ljava/lang/String;IILjava/util/Map;Ljava/text/CalendarBuilder;)Iæ
-OmatchString(Ljava/lang/String;II[Ljava/lang/String;Ljava/text/CalendarBuilder;)kjava.text.SimpleDateFormat#matchString(Ljava/lang/String;II[Ljava/lang/String;Ljava/text/CalendarBuilder;)Ié
-7matchZoneString(Ljava/lang/String;I[Ljava/lang/String;)Sjava.text.SimpleDateFormat#matchZoneString(Ljava/lang/String;I[Ljava/lang/String;)Iì
-2parse(Ljava/lang/String;Ljava/text/ParsePosition;)]java.text.SimpleDateFormat#parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;x
-,parseAmbiguousDatesAsAfter(Ljava/util/Date;)Hjava.text.SimpleDateFormat#parseAmbiguousDatesAsAfter(Ljava/util/Date;)Vn
-'readObject(Ljava/io/ObjectInputStream;)Cjava.text.SimpleDateFormat#readObject(Ljava/io/ObjectInputStream;)Vh
-$set2DigitYearStart(Ljava/util/Date;)@java.text.SimpleDateFormat#set2DigitYearStart(Ljava/util/Date;)VÜ
-3setDateFormatSymbols(Ljava/text/DateFormatSymbols;)Ojava.text.SimpleDateFormat#setDateFormatSymbols(Ljava/text/DateFormatSymbols;)VF
-shouldObeyCount(II)/java.text.SimpleDateFormat#shouldObeyCount(II)Z¨
-FsubFormat(IILjava/text/Format$FieldDelegate;Ljava/lang/StringBuffer;Z)bjava.text.SimpleDateFormat#subFormat(IILjava/text/Format$FieldDelegate;Ljava/lang/StringBuffer;Z)VŒ
-WsubParse(Ljava/lang/String;IIIZ[ZLjava/text/ParsePosition;ZLjava/text/CalendarBuilder;)sjava.text.SimpleDateFormat#subParse(Ljava/lang/String;IIIZ[ZLjava/text/ParsePosition;ZLjava/text/CalendarBuilder;)I¨
-FsubParseNumericZone(Ljava/lang/String;IIIZLjava/text/CalendarBuilder;)bjava.text.SimpleDateFormat#subParseNumericZone(Ljava/lang/String;IIIZLjava/text/CalendarBuilder;)I§
-BsubParseZoneString(Ljava/lang/String;ILjava/text/CalendarBuilder;)^java.text.SimpleDateFormat#subParseZoneString(Ljava/lang/String;ILjava/text/CalendarBuilder;)IY
-toLocalizedPattern()Ajava.text.SimpleDateFormat#toLocalizedPattern()Ljava/lang/String;G
-toPattern()8java.text.SimpleDateFormat#toPattern()Ljava/lang/String;¡
-HtranslatePattern(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ujava.text.SimpleDateFormat#translatePattern(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;L
-useDateFormatSymbols()2java.text.SimpleDateFormat#useDateFormatSymbols()Z|
-.zeroPaddingNumber(IIILjava/lang/StringBuffer;)Jjava.text.SimpleDateFormat#zeroPaddingNumber(IIILjava/lang/StringBuffer;)V≈
-java.text.ParseExceptionjava.lang.ExceptionT
-<init>(Ljava/lang/String;I)5java.text.ParseException#<init>(Ljava/lang/String;I)V>
-getErrorOffset()*java.text.ParseException#getErrorOffset()I±
+test5() CreateRideMockWhiteTest#test5()V±
 gui.BaloraGUIjavax.swing.JFrameG
 <init>(Ljava/lang/String;))gui.BaloraGUI#<init>(Ljava/lang/String;)VN
 getBusinessLogic()8gui.BaloraGUI#getBusinessLogic()LbusinessLogic/BLFacade;á
@@ -3903,18 +3915,7 @@ valueOf(D)-java.lang.Double#valueOf(D)Ljava/lang/Double;]
 setText(Ljava/lang/String;)7javax.swing.JPasswordField#setText(Ljava/lang/String;)V4
 
 updateUI()&javax.swing.JPasswordField#updateUI()Vr
-)writeObject(Ljava/io/ObjectOutputStream;)Ejavax.swing.JPasswordField#writeObject(Ljava/io/ObjectOutputStream;)Võ
-GetRidesByDriverBDBlackTestjava.lang.Object1
-<init>()%GetRidesByDriverBDBlackTest#<init>()V/
-test1()$GetRidesByDriverBDBlackTest#test1()V/
-test2()$GetRidesByDriverBDBlackTest#test2()V/
-test3()$GetRidesByDriverBDBlackTest#test3()V/
-test4()$GetRidesByDriverBDBlackTest#test4()V/
-test5()$GetRidesByDriverBDBlackTest#test5()V/
-test6()$GetRidesByDriverBDBlackTest#test6()V/
-test7()$GetRidesByDriverBDBlackTest#test7()V/
-test8()$GetRidesByDriverBDBlackTest#test8()V/
-test9()$GetRidesByDriverBDBlackTest#test9()Vó
+)writeObject(Ljava/io/ObjectOutputStream;)Ejavax.swing.JPasswordField#writeObject(Ljava/io/ObjectOutputStream;)Vó
 gui.RegisterGUIjavax.swing.JFrame%
 <init>()gui.RegisterGUI#<init>()VP
 getBusinessLogic():gui.RegisterGUI#getBusinessLogic()LbusinessLogic/BLFacade;â
@@ -4066,7 +4067,12 @@ T<init>(Lgui/BidaiakKudeatuGUI;Ljava/util/List;Ljavax/swing/table/DefaultTableMo
 -actionPerformed(Ljava/awt/event/ActionEvent;)Fgui.BidaiakKudeatuGUI$1#actionPerformed(Ljava/awt/event/ActionEvent;)V†
 gui.BidaiakKudeatuGUI$2java.awt.event.ActionListenerjava.lang.Object[
 <init>(Lgui/BidaiakKudeatuGUI;)8gui.BidaiakKudeatuGUI$2#<init>(Lgui/BidaiakKudeatuGUI;)Vw
--actionPerformed(Ljava/awt/event/ActionEvent;)Fgui.BidaiakKudeatuGUI$2#actionPerformed(Ljava/awt/event/ActionEvent;)V´
+-actionPerformed(Ljava/awt/event/ActionEvent;)Fgui.BidaiakKudeatuGUI$2#actionPerformed(Ljava/awt/event/ActionEvent;)V∏
+CancelRideMockWhiteTestjava.lang.Object-
+<init>()!CancelRideMockWhiteTest#<init>()V)
+init()CancelRideMockWhiteTest#init()V1
+
+tearDown()#CancelRideMockWhiteTest#tearDown()V´
 gui.ApplicationLauncherjava.lang.Object-
 <init>()!gui.ApplicationLauncher#<init>()VO
 main([Ljava/lang/String;)2gui.ApplicationLauncher#main([Ljava/lang/String;)V«2
@@ -4241,20 +4247,13 @@ toString())java.net.URL#toString()Ljava/lang/String;-
 hashCode()%javax.xml.namespace.QName#hashCode()ID
 
 toString()6javax.xml.namespace.QName#toString()Ljava/lang/String;o
-valueOf(Ljava/lang/String;)Pjavax.xml.namespace.QName#valueOf(Ljava/lang/String;)Ljavax/xml/namespace/QName;¯
+valueOf(Ljava/lang/String;)Pjavax.xml.namespace.QName#valueOf(Ljava/lang/String;)Ljavax/xml/namespace/QName;Ë
  testOperations.TestBusinessLogicjava.lang.Object6
 <init>()*testOperations.TestBusinessLogic#<init>()VÎ
-[addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IF)ãtestOperations.TestBusinessLogic#addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IF)Ldomain/Driver;Ä
--addMovement(Ldomain/User;Ljava/lang/String;D)OtestOperations.TestBusinessLogic#addMovement(Ldomain/User;Ljava/lang/String;D)Vñ
-1addTraveler(Ljava/lang/String;Ljava/lang/String;)atestOperations.TestBusinessLogic#addTraveler(Ljava/lang/String;Ljava/lang/String;)Ldomain/Driver;X
-cancelRide(Ldomain/Ride;);testOperations.TestBusinessLogic#cancelRide(Ldomain/Ride;)Vò
-2createDriver(Ljava/lang/String;Ljava/lang/String;)btestOperations.TestBusinessLogic#createDriver(Ljava/lang/String;Ljava/lang/String;)Ldomain/Driver;€
-TcreateRide(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IFLjava/lang/String;)ÇtestOperations.TestBusinessLogic#createRide(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IFLjava/lang/String;)Ldomain/Ride;d
+[addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IF)ãtestOperations.TestBusinessLogic#addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IF)Ldomain/Driver;ò
+2createDriver(Ljava/lang/String;Ljava/lang/String;)btestOperations.TestBusinessLogic#createDriver(Ljava/lang/String;Ljava/lang/String;)Ldomain/Driver;d
 existDriver(Ljava/lang/String;)AtestOperations.TestBusinessLogic#existDriver(Ljava/lang/String;)Z»
-QexistRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)stestOperations.TestBusinessLogic#existRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Zt
-getTraveler(Ljava/lang/String;)QtestOperations.TestBusinessLogic#getTraveler(Ljava/lang/String;)Ldomain/Traveler;\
-isRideActive(Ldomain/Ride;)=testOperations.TestBusinessLogic#isRideActive(Ldomain/Ride;)Zf
- persistBooking(Ldomain/Booking;)BtestOperations.TestBusinessLogic#persistBooking(Ldomain/Booking;)Vf
+QexistRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)stestOperations.TestBusinessLogic#existRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Zf
  removeDriver(Ljava/lang/String;)BtestOperations.TestBusinessLogic#removeDriver(Ljava/lang/String;)Z◊
 RremoveRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)ÄtestOperations.TestBusinessLogic#removeRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Ldomain/Ride;ø"
 java.awt.Dialogjava.awt.WindowG
@@ -4651,16 +4650,12 @@ $exceptions.TravelerNotFoundExceptionjava.lang.Exception:
 -actionPerformed(Ljava/awt/event/ActionEvent;)=gui.AdminGUI$3#actionPerformed(Ljava/awt/event/ActionEvent;)VÛ
 gui.AdminGUI$4java.awt.event.ActionListenerjava.lang.Object@
 <init>(Lgui/AdminGUI;)&gui.AdminGUI$4#<init>(Lgui/AdminGUI;)Vn
--actionPerformed(Ljava/awt/event/ActionEvent;)=gui.AdminGUI$4#actionPerformed(Ljava/awt/event/ActionEvent;)Vä
+-actionPerformed(Ljava/awt/event/ActionEvent;)=gui.AdminGUI$4#actionPerformed(Ljava/awt/event/ActionEvent;)V∏
 CancelRideMockBlackTestjava.lang.Object-
 <init>()!CancelRideMockBlackTest#<init>()V)
 init()CancelRideMockBlackTest#init()V1
 
-tearDown()#CancelRideMockBlackTest#tearDown()V[
-testCancelRideAlreadyCanceled()8CancelRideMockBlackTest#testCancelRideAlreadyCanceled()VW
-testCancelRideDatabaseError()6CancelRideMockBlackTest#testCancelRideDatabaseError()VM
-testCancelRideNotFound()1CancelRideMockBlackTest#testCancelRideNotFound()VK
-testCancelRideSuccess()0CancelRideMockBlackTest#testCancelRideSuccess()Vƒ
+tearDown()#CancelRideMockBlackTest#tearDown()Vƒ
 gui.AlertakKudeatuGUI$1java.awt.event.ActionListenerjava.lang.Object
 1<init>(Lgui/AlertakKudeatuGUI;Ljava/lang/String;)Jgui.AlertakKudeatuGUI$1#<init>(Lgui/AlertakKudeatuGUI;Ljava/lang/String;)Vw
 -actionPerformed(Ljava/awt/event/ActionEvent;)Fgui.AlertakKudeatuGUI$1#actionPerformed(Ljava/awt/event/ActionEvent;)Vë
@@ -4830,32 +4825,7 @@ $remove(Ljavax/swing/AbstractButton;)=javax.swing.ButtonGroup#remove(Ljavax/swi
 'setSelected(Ljavax/swing/ButtonModel;Z)@javax.swing.ButtonGroup#setSelected(Ljavax/swing/ButtonModel;Z)V©
 gui.ErreklamazioakGUI$1java.awt.event.ActionListenerjava.lang.Object„
 c<init>(Lgui/ErreklamazioakGUI;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ldomain/Booking;)|gui.ErreklamazioakGUI$1#<init>(Lgui/ErreklamazioakGUI;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ldomain/Booking;)Vw
--actionPerformed(Ljava/awt/event/ActionEvent;)Fgui.ErreklamazioakGUI$1#actionPerformed(Ljava/awt/event/ActionEvent;)Vµ
-GetRidesByDriverBDBlackTestMockjava.lang.Object5
-<init>())GetRidesByDriverBDBlackTestMock#<init>()V1
-init()'GetRidesByDriverBDBlackTestMock#init()V9
-
-tearDown()+GetRidesByDriverBDBlackTestMock#tearDown()V3
-test1()(GetRidesByDriverBDBlackTestMock#test1()V3
-test2()(GetRidesByDriverBDBlackTestMock#test2()V3
-test3()(GetRidesByDriverBDBlackTestMock#test3()V3
-test4()(GetRidesByDriverBDBlackTestMock#test4()V3
-test5()(GetRidesByDriverBDBlackTestMock#test5()V3
-test6()(GetRidesByDriverBDBlackTestMock#test6()V3
-test7()(GetRidesByDriverBDBlackTestMock#test7()V3
-test8()(GetRidesByDriverBDBlackTestMock#test8()V3
-test9()(GetRidesByDriverBDBlackTestMock#test9()Vö
-java.lang.RuntimeExceptionjava.lang.Exception0
-<init>()$java.lang.RuntimeException#<init>()VT
-<init>(Ljava/lang/String;)6java.lang.RuntimeException#<init>(Ljava/lang/String;)V~
-/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Kjava.lang.RuntimeException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)VÇ
-1<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)Mjava.lang.RuntimeException#<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)VZ
-<init>(Ljava/lang/Throwable;)9java.lang.RuntimeException#<init>(Ljava/lang/Throwable;)V≈
-"java.lang.IllegalArgumentExceptionjava.lang.RuntimeException8
-<init>(),java.lang.IllegalArgumentException#<init>()V\
-<init>(Ljava/lang/String;)>java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)VÜ
-/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Sjava.lang.IllegalArgumentException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)Vb
-<init>(Ljava/lang/Throwable;)Ajava.lang.IllegalArgumentException#<init>(Ljava/lang/Throwable;)V¸
+-actionPerformed(Ljava/awt/event/ActionEvent;)Fgui.ErreklamazioakGUI$1#actionPerformed(Ljava/awt/event/ActionEvent;)V¸
 CreateRideMockBlackTestjava.lang.Object-
 <init>()!CreateRideMockBlackTest#<init>()V)
 init()CreateRideMockBlackTest#init()V1
@@ -4958,4 +4928,40 @@ $isIgnoringElementContentWhitespace()Njavax.xml.parsers.DocumentBuilderFactory#
 -actionPerformed(Ljava/awt/event/ActionEvent;)Cgui.AlertaSortuGUI$2#actionPerformed(Ljava/awt/event/ActionEvent;)VÛ
 gui.AlertaSortuGUI$3!java.beans.PropertyChangeListenerjava.lang.Object*
 <init>()gui.AlertaSortuGUI$3#<init>()Vz
-0propertyChange(Ljava/beans/PropertyChangeEvent;)Fgui.AlertaSortuGUI$3#propertyChange(Ljava/beans/PropertyChangeEvent;)V
+0propertyChange(Ljava/beans/PropertyChangeEvent;)Fgui.AlertaSortuGUI$3#propertyChange(Ljava/beans/PropertyChangeEvent;)Võ
+GetRidesByDriverBDBlackTestjava.lang.Object1
+<init>()%GetRidesByDriverBDBlackTest#<init>()V/
+test1()$GetRidesByDriverBDBlackTest#test1()V/
+test2()$GetRidesByDriverBDBlackTest#test2()V/
+test3()$GetRidesByDriverBDBlackTest#test3()V/
+test4()$GetRidesByDriverBDBlackTest#test4()V/
+test5()$GetRidesByDriverBDBlackTest#test5()V/
+test6()$GetRidesByDriverBDBlackTest#test6()V/
+test7()$GetRidesByDriverBDBlackTest#test7()V/
+test8()$GetRidesByDriverBDBlackTest#test8()V/
+test9()$GetRidesByDriverBDBlackTest#test9()Vö
+java.lang.RuntimeExceptionjava.lang.Exception0
+<init>()$java.lang.RuntimeException#<init>()VT
+<init>(Ljava/lang/String;)6java.lang.RuntimeException#<init>(Ljava/lang/String;)V~
+/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Kjava.lang.RuntimeException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)VÇ
+1<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)Mjava.lang.RuntimeException#<init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)VZ
+<init>(Ljava/lang/Throwable;)9java.lang.RuntimeException#<init>(Ljava/lang/Throwable;)Vµ
+GetRidesByDriverBDBlackTestMockjava.lang.Object5
+<init>())GetRidesByDriverBDBlackTestMock#<init>()V1
+init()'GetRidesByDriverBDBlackTestMock#init()V9
+
+tearDown()+GetRidesByDriverBDBlackTestMock#tearDown()V3
+test1()(GetRidesByDriverBDBlackTestMock#test1()V3
+test2()(GetRidesByDriverBDBlackTestMock#test2()V3
+test3()(GetRidesByDriverBDBlackTestMock#test3()V3
+test4()(GetRidesByDriverBDBlackTestMock#test4()V3
+test5()(GetRidesByDriverBDBlackTestMock#test5()V3
+test6()(GetRidesByDriverBDBlackTestMock#test6()V3
+test7()(GetRidesByDriverBDBlackTestMock#test7()V3
+test8()(GetRidesByDriverBDBlackTestMock#test8()V3
+test9()(GetRidesByDriverBDBlackTestMock#test9()V≈
+"java.lang.IllegalArgumentExceptionjava.lang.RuntimeException8
+<init>(),java.lang.IllegalArgumentException#<init>()V\
+<init>(Ljava/lang/String;)>java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)VÜ
+/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Sjava.lang.IllegalArgumentException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)Vb
+<init>(Ljava/lang/Throwable;)Ajava.lang.IllegalArgumentException#<init>(Ljava/lang/Throwable;)V

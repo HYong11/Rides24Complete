@@ -1,0 +1,4 @@
+testOperations.TestDataAccess#removeUser(Ldomain/User;)V
+aff2925d3f16afcf6650487637c523c1
+==
+getUsername domain.User#getUsername()Ljava/lang/String;

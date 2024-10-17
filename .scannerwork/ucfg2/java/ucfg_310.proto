@@ -1,0 +1,71 @@
+
+>businessLogic.BLFacadeImplementation#getAlert(I)Ldomain/Alert;h
+\C:/Users/HaiYong/git/Rides24Complete/src/main/java/businessLogic/BLFacadeImplementation.javaú ú("1*Ï
+1
+ù ù(á
+Ñ
+
+ù ù(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+ù ù(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()á
+Ñ
+
+û û(
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager¿Ω
+
+û û(+
+%3domain.Alert"/dataAccess.DataAccess#getAlert(I)Ldomain/Alert;*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*"
+
+__unknown_file (
+""2getAlert(I)Y
+W
+
+û û(,
+adomain.Alert"__id*0
+
+__unknown_file (
+
+%3domain.Alertá
+Ñ
+
+ü ü(
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+ü ü(
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"!
+
+† †(
+
+adomain.Alert: 
+
+__unknown_file (
+""B(&
+$businessLogic.BLFacadeImplementationH

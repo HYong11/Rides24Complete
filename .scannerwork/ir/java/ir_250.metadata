@@ -1,0 +1,6 @@
+businessLogic.BLFacadeImplementation#createAlert(Ldomain/Alert;)Z
+03af4c7107be484dc929acda405860fd
+==
+createAlert dataAccess.DataAccess#createAlert(Ldomain/Alert;)Z
+close dataAccess.DataAccess#close()V
+open dataAccess.DataAccess#open()V

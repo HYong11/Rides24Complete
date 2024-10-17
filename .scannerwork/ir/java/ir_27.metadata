@@ -1,0 +1,4 @@
+gui.CreateRideGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)V
+9d1dda9f456ca2f9756d82efcccbd753
+==
+setVisible java.awt.Window#setVisible(Z)V

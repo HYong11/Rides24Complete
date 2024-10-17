@@ -1,0 +1,4 @@
+CancelRideMockBlackTest#init()V
+78f8eb3d9e9af16906078021753bd7d2
+dataAccess.DataAccess#instance-init#
+dataAccess.DataAccess#<init>(Ljavax/persistence/EntityManager;)V

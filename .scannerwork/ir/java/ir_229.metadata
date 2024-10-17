@@ -1,0 +1,6 @@
+businessLogic.BLFacadeImplementation#updateBooking(Ldomain/Booking;)V
+d51082dc4e75ad68f0c1fa8f648e2c66
+==
+close dataAccess.DataAccess#close()V
+updateBooking dataAccess.DataAccess#updateBooking(Ldomain/Booking;)V
+open dataAccess.DataAccess#open()V

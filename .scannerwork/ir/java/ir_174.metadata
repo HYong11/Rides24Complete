@@ -1,0 +1,6 @@
+testOperations.TestBusinessLogic#removeRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Ldomain/Ride;
+8a6a915ffbba62bf867de6b6477f8171
+==
+removeRide testOperations.TestDataAccess#removeRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Ldomain/Ride;
+close testOperations.TestDataAccess#close()V
+open testOperations.TestDataAccess#open()V

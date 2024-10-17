@@ -1,0 +1,8 @@
+testOperations.TestBusinessLogic#<init>()V
+2376f2f86dbd58a760b5b0d209eb41a4
+testOperations.TestDataAccess#instance-init#
+testOperations.TestDataAccess#<init>()V
+configuration.ConfigXML#getInstance()Lconfiguration/ConfigXML;
+==
+println java.io.PrintStream#println(Ljava/lang/String;)V
+close testOperations.TestDataAccess#close()V

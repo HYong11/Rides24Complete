@@ -2,24 +2,18 @@ package testOperations;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.ResourceBundle;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
+import javax.persistence.Query;
 
 import configuration.ConfigXML;
-import domain.Booking;
 import domain.Driver;
-import domain.Movement;
 import domain.Ride;
 import domain.Traveler;
 import domain.User;
-import exceptions.RideAlreadyExistException;
-import exceptions.RideMustBeLaterThanTodayException;
 
 
 public class TestDataAccess {
@@ -142,145 +136,117 @@ public class TestDataAccess {
 			return null;
 
 		}
-
-	    public void persistBooking(Booking booking) {
-	        db.getTransaction().begin();
-	        try {
-	            db.persist(booking);
-	            db.getTransaction().commit();
+		
+		public void addUser(User user) {
+			db.getTransaction().begin();
+			db.persist(user);
+			db.getTransaction().commit();
+		}
+		
+		public void removeUser(User user) {
+			User usuario = db.find(User.class, user.getUsername());
+			if(usuario !=null) {
+			db.getTransaction().begin();
+			db.remove(usuario);
+			db.getTransaction().commit();
+			}
+		}
+		
+		public void addTraveler(Traveler traveler) {
+			db.getTransaction().begin();
+			db.persist(traveler);
+			db.getTransaction().commit();
+		}
+		
+		public void removeTraveler(Traveler traveler) {
+			Traveler viajero = db.find(Traveler.class, traveler.getUsername());
+			if(viajero !=null) {
+			db.getTransaction().begin();
+			db.remove(viajero);
+			db.getTransaction().commit();
+			}
+		}
+		public User addUser1(String username, String password, String mota) {
+			User user = null;
+			try {
+				db.getTransaction().begin();
+	            db.persist(user); // Añadir el objeto User a la base de datos
+	            db.getTransaction().commit(); 
+	            return user;// Devolver el user añadido
 	        } catch (Exception e) {
 	            if (db.getTransaction().isActive()) {
-	                db.getTransaction().rollback();
+	            	db.getTransaction().rollback(); // Revertir en caso de error
 	            }
 	            e.printStackTrace();
+	            return null;// Mostrar la excepción y devolver null
+	        } finally {
+	            db.close(); // Cerrar el EntityManager
 	        }
-	    }
-	    
-	    public void addMovement(User user, String eragiketa, double amount) {
-	        try {
-	            db.getTransaction().begin();
-	            Movement movement = new Movement(user, eragiketa, amount);
-	            db.persist(movement);
-	            db.getTransaction().commit();
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	            db.getTransaction().rollback();
-	        }
-	    }
-	    
-	    public void cancelRide(Ride ride) {
-	        try {
-	            db.getTransaction().begin();
-
-	            for (Booking booking : ride.getBookings()) {
-	                if (booking.getStatus().equals("Accepted") || booking.getStatus().equals("NotDefined")) {
-	                    double price = booking.prezioaKalkulatu();
-	                    Traveler traveler = booking.getTraveler();
-	                    double frozenMoney = traveler.getIzoztatutakoDirua();
-	                    traveler.setIzoztatutakoDirua(frozenMoney - price);
-
-	                    double money = traveler.getMoney();
-	                    traveler.setMoney(money + price);
-	                    db.merge(traveler); // Asegúrate de que estás actualizando al Traveler en la DB
-	                    addMovement(traveler, "BookDeny", price); // Si tienes este método implementado
-	                    db.getTransaction().commit();
-	                    db.getTransaction().begin(); // Comenzar una nueva transacción
-	                }
-	                booking.setStatus("Rejected");
-	                db.merge(booking); // Actualiza el booking en la base de datos
-	            }
-	            ride.setActive(false); // Cambiar estado del ride
-	            db.merge(ride); // Actualiza el ride en la base de datos
-
-	            db.getTransaction().commit();
-	        } catch (Exception e) {
-	            if (db.getTransaction().isActive()) {
-	                db.getTransaction().rollback();
-	            }
-	            e.printStackTrace();
-	        }
+		}
+		
+		public User addUserWithMoney(String username, String password, String mota, double money) {
+			System.out.println(">> TestDataAccess: addUser");
+			User user=null;
+				db.getTransaction().begin();
+				try {
+					user = new User(username, password, mota);
+					user.setMoney(money);
+					db.persist(user);
+					db.getTransaction().commit();
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return user;
 	    }
 		
-	    
-	    public Traveler getTraveler(String username) {
-	        System.out.println(">> TestDataAccess: getTraveler");
-	        TypedQuery<Traveler> query = db.createQuery("SELECT t FROM Traveler t WHERE t.username = :username", Traveler.class);
-	        query.setParameter("username", username);
-	        List<Traveler> resultList = query.getResultList();
-	        if (resultList.isEmpty()) {
-	            return null;
-	        } else {
-	            return resultList.get(0);
-	        }
-	    }
-	    
-	    public Driver addDriver(String username, String password) {
-	        System.out.println(">> TestDataAccess: addDriver");
-	        Driver driver = null;
-	        db.getTransaction().begin();
-	        try {
-	            Driver existingDriver = db.find(Driver.class, username);
-	            Traveler existingTraveler = db.find(Traveler.class, username);
-	            if (existingDriver != null || existingTraveler != null) {
-	                return null; // Retorna null si ya existe un Driver o Traveler con el mismo nombre
-	            }
-
-	            driver = new Driver(username, password);
-	            db.persist(driver);
-	            db.getTransaction().commit();
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	            if (db.getTransaction().isActive()) {
-	                db.getTransaction().rollback();
-	            }
-	        }
-	        return driver; // Retorna el Driver creado o null si hubo un error
-	    }
-	    
-	    public boolean isRideActive(Ride ride) {
-	        System.out.println(">> TestDataAccess: isRideActive");
-
-	        if (ride != null) {
-	            // Comprobar si tiene bookings activos
-	            for (Booking booking : ride.getBookings()) {
-	                if (booking.getStatus().equals("Accepted") || booking.getStatus().equals("NotDefined")) {
-	                    return true; // Hay bookings activos
-	                }
-	            }
-	        }
-	        return false; // No hay bookings activos
-	    }
-	    
-		public Ride createRide(String from, String to, Date date, int nPlaces, float price, String driverName)
-				throws RideAlreadyExistException, RideMustBeLaterThanTodayException {
-			System.out.println(
-					">> TestDataAccess: createRide=> from= " + from + " to= " + to + " driver=" + driverName + " date " + date);
-			if (driverName==null) return null;
-			try {
-				if (new Date().compareTo(date) > 0) {
-					System.out.println("ppppp");
-					throw new RideMustBeLaterThanTodayException(
-							ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.ErrorRideMustBeLaterThanToday"));
-				}
-
-				db.getTransaction().begin();
-				Driver driver = db.find(Driver.class, driverName);
-				if (driver.doesRideExists(from, to, date)) {
-					db.getTransaction().commit();
-					throw new RideAlreadyExistException(
-							ResourceBundle.getBundle("Etiquetas").getString("TestDataAccess.RideAlreadyExist"));
-				}
-				Ride ride = driver.addRide(from, to, date, nPlaces, price);
-				// next instruction can be obviated
-				db.persist(driver);
-				db.getTransaction().commit();
-
-				return ride;
-			} catch (NullPointerException e) {
-				// TODO Auto-generated catch block
-				return null;
-			}
+		public User addUser2(User user) {
 			
-
+			try {
+				db.getTransaction().begin();
+	            db.persist(user); // Añadir el objeto User a la base de datos
+	            db.getTransaction().commit(); 
+	            return user;// Devolver el user añadido
+	        } catch (Exception e) {
+	            if (db.getTransaction().isActive()) {
+	            	db.getTransaction().rollback(); // Revertir en caso de error
+	            }
+	            e.printStackTrace();
+	            return null;// Mostrar la excepción y devolver null
+	        } finally {
+	            db.close(); // Cerrar el EntityManager
+	        }
 		}
+		
+		public boolean removeUser(String name) {
+			System.out.println(">> TestDataAccess: removeUser");
+			User u = db.find(User.class, name);
+			if (u!=null) {
+				db.getTransaction().begin();
+				db.remove(u);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+	    }
+		
+		public User getUser(String username, String password, String mota) {
+			try {
+	            db.getTransaction().begin();
+	            Query query = db.createQuery("SELECT u FROM User u WHERE u.username = :username AND u.passwd = :password AND u.mota = :mota");
+	            query.setParameter("username", username);
+	            query.setParameter("password", password);
+	            query.setParameter("mota", mota);
+
+	            User user = (User) query.getSingleResult();
+	            db.getTransaction().commit();
+	            return user;
+	        } catch (Exception e) {
+	            db.getTransaction().rollback();
+	            e.printStackTrace();
+	            return null;
+	        }
+		}
+
+		
 }

@@ -1,0 +1,4 @@
+gui.EgoeraGUI#jButtonClose_actionPerformed(Ljava/awt/event/ActionEvent;)V
+e825feb47015820f7b02f3327bd71679
+==
+setVisible java.awt.Window#setVisible(Z)V

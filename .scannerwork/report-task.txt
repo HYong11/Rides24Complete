@@ -1,7 +1,7 @@
 organization=hyong11
 projectKey=hyong11_rides24
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.56940
+serverVersion=8.0.0.57006
 dashboardUrl=https://sonarcloud.io/dashboard?id=hyong11_rides24
-ceTaskId=AZJjlqxR1eLi-5lnzD-x
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZJjlqxR1eLi-5lnzD-x
+ceTaskId=AZKDpSuYFdI53ya1HUu0
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZKDpSuYFdI53ya1HUu0
