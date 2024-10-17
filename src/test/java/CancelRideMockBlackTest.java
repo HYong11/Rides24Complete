@@ -58,7 +58,7 @@ static DataAccess sut;
     }
 	
 	
-/*
+
 	Ride ride;
 	
 	@Test
@@ -339,6 +339,6 @@ static DataAccess sut;
 			}
 		
 	}  
-	*/
+
 
 }

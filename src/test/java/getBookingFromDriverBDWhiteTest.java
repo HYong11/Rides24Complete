@@ -27,7 +27,7 @@ public class getBookingFromDriverBDWhiteTest {
     
     // additional operations needed to execute the test 
     static TestDataAccess testDA = new TestDataAccess();
-    /*
+
     @Test
     // sut.getBookingFromDriver: Test case where the driver has bookings
 	    public void test1() {
@@ -145,5 +145,4 @@ public class getBookingFromDriverBDWhiteTest {
             testDA.close();
         }
     }
-    */
 }

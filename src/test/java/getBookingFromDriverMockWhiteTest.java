@@ -80,7 +80,7 @@ public class getBookingFromDriverMockWhiteTest {
     public void tearDown() {
         persistenceMock.close();
     }
-    /*
+
     @Test
     // White box test: Verify correct bookings are returned for an existing driver
     public void test1() 
@@ -143,5 +143,4 @@ public class getBookingFromDriverMockWhiteTest {
         // Verify the results
         assertNull(bookings);
     }
-    */
 }

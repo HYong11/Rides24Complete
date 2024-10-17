@@ -27,7 +27,7 @@ public class CancelRideBDBlackTest {
 	private EntityManager db;
 	private Ride ride;
 	
-/*
+
 	@Test
 	public void test1() {
 		// define parameters
@@ -271,6 +271,6 @@ public class CancelRideBDBlackTest {
 			sut.close();
 		}
 	}
-*/
+
 	
 }
