@@ -50,7 +50,7 @@
 		<sonar.organization>hyong11</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.projectKey>hyong11_rides24</sonar.projectKey>
-		<sonar.login>0b0ef86efe1ce8f37f21e36cecb11e740196027c</sonar.login>
+		<sonar.login>${env.SONAR_TOKEN}</sonar.login>
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
